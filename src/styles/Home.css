@@ -1,0 +1,32 @@
+/* Example CSS rule */
+body {
+  background-color: #f0f0f0;
+}
+.col-md-4{
+  margin-top: 20px;
+}
+
+.container{
+width: 100%;
+}
+
+.card{
+  width: 280px;
+  background-color: #f7e2b6;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 20px;
+  color: rgb(21, 20, 20);
+
+
+}
+.row{
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(233, 203, 203, 0.2);
+
+
+}

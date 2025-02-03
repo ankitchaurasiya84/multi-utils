@@ -1,0 +1,22 @@
+.form-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control{
+    background-color: #302f30;
+    color: white;
+   
+}
+
+.font-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20%;
+    margin-right: 20%;
+}
+.new-btn{
+    
+}

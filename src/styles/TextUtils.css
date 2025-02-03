@@ -1,0 +1,15 @@
+.container{
+  
+
+}
+
+
+.form-control{
+  width: 70%;
+  height: 250px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  resize: none;
+}
