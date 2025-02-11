@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/NavBar.css'; 
+import  DigitalTime from '../components/DigitalTime.jsx';
 
 const NavBar = () => {
     return (
@@ -13,9 +14,15 @@ const NavBar = () => {
             <li><Link to="/word-cloud">Word Cloud</Link></li>
             <li><Link to="/QRcode-genrator">QRcode Generate</Link></li>
             <li><Link to="/Base64Converter">Base64 Converter</Link></li>
+            <li><Link to="/url-shortner">URL Shortner</Link></li>
             <li><Link to="/Json-formatter">JSON Formatter</Link></li>
+            <li><Link to="/password-generator">Password Generator</Link></li>
+           
           </ul>
+         
         </div>
+        <div style={{ fontWeight:"700"}} > <DigitalTime/></div>
+
       </nav>
     );
   };

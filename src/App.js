@@ -9,24 +9,29 @@ import QRCodeNew from "../src/components/QRcodeNew.jsx";
 import Base64Converter from "../src/components/Base64Converter.jsx";
 import JsonFormater from "../src/components/JsonFormatter.jsx";
 import Home from "./components/Home.jsx";
+import URLShortner from "./components/URLShortner.jsx";
+import PasswordGenerator from "./components/PasswordGenerator";
 
 
 const App = () => { 
     return (
         <Router>
         <div>
-            <NavBar />
+            <NavBar/>
             <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/text-util" element={<TextUtils />} />
                 <Route exact path="/dummy-files" element={<DummyFiles />} />
                 <Route exact path="/word-cloud" element={<WordCloud1 />} />
-                <Route exact path="/QRcode-genrator" element={<QRCodeNew />} />
+                <Route exact path="/QRcode-genrator" element={<QRCodeNew/>} />
                 <Route exact path="/Base64Converter" element={<Base64Converter />} />
                 <Route exact path="/Json-formatter" element={<JsonFormater />} />
+                <Route exact path="/url-shortner" element={<URLShortner />} />
+                <Route exact path="/password-generator" element={<PasswordGenerator/>} />
             </Routes>
         </div>
         </Router>
+       
     );
     }
 

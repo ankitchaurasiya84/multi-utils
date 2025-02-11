@@ -41,7 +41,7 @@ const Base64Converter = () => {
               rows={6}
               style={{ width: '100%' }}
             />
-            <button onClick={handleCopyToClipboard} className="copy-button">
+            <button onClick={handleCopyToClipboard} className="copy-button" style={{ background: copySuccess ? 'green' : 'grey' }}>
               Copy to Clipboard
             </button>
             {copySuccess && <p className={`copy-status ${copySuccess === 'Failed to copy!' ? 'failed' : ''}`}>

@@ -28,8 +28,9 @@ const QRcodeNew = () => {
     }
   };
 
+
   return (
-    <div style={{ textAlign: "center", marginTop: "20px" }}>
+    <div style={{ textAlign: "center", marginTop: "20px" } } className="file-upload-container">
       <form onSubmit={handleOnSubmit}>
         <input
           type="text"
@@ -48,7 +49,7 @@ const QRcodeNew = () => {
           style={{
             marginLeft: "10px",
             padding: "10px",
-            background: "#007bff",
+            background: "grey",
             color: "white",
             border: "none",
             borderRadius: "5px",
@@ -69,14 +70,14 @@ const QRcodeNew = () => {
             style={{
               marginTop: "10px",
               padding: "10px",
-              background: "#28a745",
+              background: "grey",
               color: "white",
               border: "none",
               borderRadius: "5px",
               cursor: "pointer",
             }}
           >
-            Download QR Code
+            ⬇ Download QR
           </button>
         </div>
       ) : (

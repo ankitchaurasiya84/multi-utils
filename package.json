@@ -10,6 +10,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "ace-builds": "^1.37.5",
+    "axios": "^1.7.9",
     "copy-to-clipboard": "^3.3.3",
     "cra-template": "1.2.0",
     "d3": "^7.9.0",
