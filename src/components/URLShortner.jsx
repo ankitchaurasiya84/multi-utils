@@ -5,8 +5,10 @@ const URLShortner = () => {
   const [longUrl, setLongUrl] = useState("");
   const [shortUrl, setShortUrl] = useState("");
   const [error, setError] = useState("");
-  const BITLY_API_TOKEN = ""
 
+  const BITLY_API_TOKEN = process.env.REACT_APP_KEY
+  //console.log(BITLY_API_TOKEN);
+  
   const shortenUrl = async () => {
     if (!longUrl) {
       setError("Please enter a URL.");

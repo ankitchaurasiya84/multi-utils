@@ -65,7 +65,7 @@ const Home = () => {
       logoImage: password2,
       description:
         "A URL shortener converts long links into short, shareable URLs for easy access.",
-      link: "/url-shortner",
+      link: "/password-generator",
     },
   ];
   return (

@@ -14,6 +14,8 @@ import PasswordGenerator from "./components/PasswordGenerator";
 
 
 const App = () => { 
+    console.log(process.env.REACT_APP_KEY);
+    
     return (
         <Router>
         <div>
