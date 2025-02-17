@@ -88,8 +88,12 @@ const PasswordGenerator = () => {
     {password && (
       <div style={{ marginTop: "10px", padding: "10px", backgroundColor: "#f8f9fa", borderRadius: "4px", textAlign: "center", fontSize: "16px", fontWeight: "bold" }}>
         {password}
+       
       </div>
-    )}
+      
+    ) }
+<p style={{ marginTop: "5px", fontSize: "12px", color: "red" }}>Note: We do not store any passwords.</p>
+    
   </div>
 );
 

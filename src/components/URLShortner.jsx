@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import copy from "copy-to-clipboard";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 const URLShortner = () => {
   const [longUrl, setLongUrl] = useState("");
   const [shortUrl, setShortUrl] = useState("");
   const [error, setError] = useState("");
+  const [copySuccess, setCopySuccess] = useState('');
 
   const BITLY_API_TOKEN = process.env.REACT_APP_KEY
-  //console.log(BITLY_API_TOKEN);
   
   const shortenUrl = async () => {
     if (!longUrl) {
@@ -34,6 +36,17 @@ const URLShortner = () => {
       setError("Failed to shorten URL. Please try again.");
       console.error(error);
     }
+
+    
+  };
+  const copyToClipboard = () => {
+    if (shortUrl !== "") {
+      copy(shortUrl);
+     setCopySuccess('Copied!')
+  
+    } else {
+      setCopySuccess('Failed to copy!')
+    }
   };
 
   return (
@@ -54,22 +67,53 @@ const URLShortner = () => {
       <div>
         <button
           onClick={shortenUrl}
-          style={{ margin: "10px", height: "30px", borderRadius: "4px" }}
+          style={{
+            marginTop: "10px",
+            marginBottom: "10px",
+            padding: "10px",
+            background: "grey",
+            color: "white",
+            border: "none",
+            borderRadius: "5px",
+            cursor: "pointer",
+          }}
         >
           Shorten URL
         </button>
         {error && <p style={{ color: "red" }}>{error}</p>}
         <div>
           {shortUrl && (
+            <div style={{ marginLeft: "33%" , backgroundColor: "lightgray", padding: "10px", borderRadius: "5px" , width:"30%"}}>
             <a
               href={shortUrl}
-              style={{ border: "3px", color: "green", background: "yellow" }}
+              style={{ border: "3px", color: "green" }}
               target="_blank"
               rel="noopener noreferrer"
             >
               {shortUrl}
             </a>
+          
+            </div>
           )}
+          {shortUrl && (
+            <button
+              onClick={copyToClipboard}
+              style={{
+                marginTop: "10px",
+                padding: "10px",
+                background: "grey",
+                color: "white",
+                border: "none",
+                borderRadius: "5px",
+                cursor: "pointer",
+              }}
+            >
+               Copy to Clipboard 📋
+            </button>
+          )}
+          {copySuccess && <p style={{color:"green"}} >
+              {copySuccess}</p>}
+            
         </div>
       </div>
     </div>

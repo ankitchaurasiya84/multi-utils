@@ -264,7 +264,7 @@ const TextUtils = (props) => {
         <button onClick={handleExtraSpace}>Remove Extra Spaces</button>
       </div>
 
-      <div className="container" style={{ color: props.mode === 'light' ? 'black' : 'white' }}>
+      <div className="container" style={{ color: 'black' }}>
         <h1>Summary</h1>
         <p>
           {text.split(" ").filter((elements) => elements.length !== 0).length} words and {text.length} characters
