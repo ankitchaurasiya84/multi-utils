@@ -37,7 +37,7 @@ const App = () => {
             </Routes>
         </div>
         </Router>
-     <div className="flex items-center justify-center min-h-screen bg-gray-100"> <ChatBot/></div>
+     {/* <div className="flex items-center justify-center min-h-screen bg-gray-100"> <ChatBot/></div> */}
        
         </>
     );

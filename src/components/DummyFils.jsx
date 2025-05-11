@@ -8,7 +8,7 @@ import PPTXGenJS from "pptxgenjs";
 import csv from "../assets/7.png";
 import xl from "../assets/9.png";
 import ppt from "../assets/19.png";
-import zip from "../assets/18.png";
+import zip from "../assets/zip.png";
 import  png from "../assets/png.png";
 import  md from "../assets/md5.png";
 import  xml from "../assets/xml.png";

@@ -1,11 +1,11 @@
 import React from "react";
 import "../styles/Home.css";
-import textUtil1 from "../assets/text1.png";
+import textUtil1 from "../assets/textutil.png";
 import dummyfile from "../assets/2.png";
-import wordCloud from "../assets/3.png";
-import qr from "../assets/qr-new.png";
+import wordCloud from "../assets/wordcloud.png";
+import qr from "../assets/qr.png";
 import base64 from "../assets/5.png";
-import json from "../assets/json2.png";
+import json from "../assets/6.png";
 import urlShort from "../assets/url.png";
 import password2 from "../assets/password2png.png";
 
