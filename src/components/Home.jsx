@@ -47,11 +47,11 @@ const Home = () => {
       link: "/Base64Converter",
     },
     {
-      title: "Json Formatter",
-      logoImage: json,
+      title: "PDF Locker",
+      logoImage: "https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg",
       description:
-        "A JSON formatter beautifies and structures JSON data for readability and validation.",
-      link: "/Json-formatter",
+        "A PDF locker encrypts PDF files with a password to secure sensitive information.",
+      link: "/pdf-locker",
     },
     {
       title: "URL Shortner",
@@ -67,6 +67,14 @@ const Home = () => {
         "A URL shortener converts long links into short, shareable URLs for easy access.",
       link: "/password-generator",
     },
+    {
+      title: "Json Formatter",
+      logoImage: json,
+      description:
+        "A JSON formatter beautifies and structures JSON data for readability and validation.",
+      link: "/Json-formatter",
+    },
+  
   ];
   return (
     <div>

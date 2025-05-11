@@ -11,12 +11,15 @@ import JsonFormater from "../src/components/JsonFormatter.jsx";
 import Home from "./components/Home.jsx";
 import URLShortner from "./components/URLShortner.jsx";
 import PasswordGenerator from "./components/PasswordGenerator";
+import PDFLock from "./components/PDFLockComponent";
+import ChatBot from "./components/ChatBot.jsx";
 
 
 const App = () => { 
     console.log(process.env.REACT_APP_KEY);
     
     return (
+        <>
         <Router>
         <div>
             <NavBar/>
@@ -30,10 +33,13 @@ const App = () => {
                 <Route exact path="/Json-formatter" element={<JsonFormater />} />
                 <Route exact path="/url-shortner" element={<URLShortner />} />
                 <Route exact path="/password-generator" element={<PasswordGenerator/>} />
+                <Route exact path="/pdf-locker" element={<PDFLock/>} />
             </Routes>
         </div>
         </Router>
+     <div className="flex items-center justify-center min-h-screen bg-gray-100"> <ChatBot/></div>
        
+        </>
     );
     }
 
