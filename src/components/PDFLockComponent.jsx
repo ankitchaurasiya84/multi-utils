@@ -6,10 +6,12 @@ import { saveAs } from 'file-saver';
 const PDFLockComponent = () => {
   const [pdfFile, setPdfFile] = useState(null);
   const [password, setPassword] = useState("");
+  const [repPassword, setRepPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
+
     if (file && file.type === "application/pdf") {
       setPdfFile(file);
     } else {
@@ -21,10 +23,17 @@ const PDFLockComponent = () => {
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
+  const handleRePasswordChange=(event)=>{
+    setRepPassword(event.target.value);
+  }
 
   const lockPDF = async () => {
     if (!pdfFile || !password) {
       alert("Please select a PDF file and enter a password.");
+      return;
+    }
+    else if(password!==repPassword){
+      alert("Password and Re-entered Password do not match");
       return;
     }
 
@@ -72,8 +81,8 @@ const PDFLockComponent = () => {
        <input
         type="password"
         placeholder="ReEnter Password"
-        value={password}
-        onChange={handlePasswordChange}
+        value={repPassword}
+        onChange={handleRePasswordChange}
         className="password-input"
       />
       <button onClick={lockPDF} className="lock-button" disabled={loading}>
