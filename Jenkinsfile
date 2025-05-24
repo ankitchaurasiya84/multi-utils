@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'node:18'   // Official Node.js Docker image
-      args '-u root'    // Run as root user if needed
-    }
-  }
+  agent any
 
   environment {
     VERCEL_TOKEN = credentials('BwCKDa1GdR2WwcELIThVPSg1')
@@ -17,15 +12,11 @@ pipeline {
       }
     }
 
-    stage('Install Dependencies') {
+    stage('Build inside Docker') {
       steps {
-        sh 'npm install'
-      }
-    }
-
-    stage('Build') {
-      steps {
-        sh 'npm run build'
+        // Run Docker commands manually
+        sh 'docker build -t multi-utils-react-app .'
+        sh 'docker run --rm multi-utils-react-app npm run build'
       }
     }
 
