@@ -36,7 +36,7 @@ const Home = () => {
       title: "QR Generator",
       logoImage: qr,
       description:
-        "A QR code generator creates scannable QR codes from text, URLs, or data.",
+        "A QR code generator creates scannable QR codes from text, URLs, or data with no ads.",
       link: "/QRcode-genrator",
     },
     {
