@@ -8,18 +8,18 @@ const Base64Converter = () => {
     const [isLoading, setIsLoading] = useState(false);
   
     const handleFileChange = (e) => {
-      const file = e.target.files[0]; // Get the first selected file
+      const file = e.target.files[0]; 
       if (file) {
         setIsLoading(true);
         setFileName(file.name);
         const reader = new FileReader();
         reader.onloadend = () => {
-          const base64String = reader.result.split(',')[1]; // Get Base64 part of the result
+          const base64String = reader.result.split(',')[1]; 
           setBase64String(base64String);
           setIsLoading(false);
-          setCopySuccess(''); // Reset copy status when new file is uploaded
+          setCopySuccess('');
         };
-        reader.readAsDataURL(file); // Read file as data URL (Base64)
+        reader.readAsDataURL(file); 
       }
     };
   

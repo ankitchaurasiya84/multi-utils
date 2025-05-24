@@ -64,7 +64,7 @@ const Home = () => {
       title: "Pwd Generator",
       logoImage: password2,
       description:
-        "A URL shortener converts long links into short, shareable URLs for easy access.",
+        "A secure Pasword Generator that will prevent to hack.",
       link: "/password-generator",
     },
     {

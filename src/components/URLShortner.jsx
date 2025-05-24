@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import copy from "copy-to-clipboard";
-import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 const URLShortner = () => {
   const [longUrl, setLongUrl] = useState("");
