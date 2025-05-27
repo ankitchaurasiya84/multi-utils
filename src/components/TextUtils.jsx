@@ -57,6 +57,31 @@ const TextUtils = (props) => {
     }
   };
 
+  const handleSnackCase=()=>{
+    if(text!==""){
+      let newText=text.replaceAll(" ","_")
+      setText(newText)
+    }else {
+      toast("Enter Text to Convert Snack Case", { position: "top-center", autoClose: 1500 });
+    }
+  }
+  const handleCapitalizeCase=()=>{
+    if(text!==""){
+
+      let newText=text.toLowerCase().split(" ")
+      let arr=""
+     arr=newText.map((i)=>{
+
+
+      return (i.charAt(0).toUpperCase()+i.slice(1))
+     }
+   
+    )
+      setText(arr.join(" "))
+    }else {
+      toast("Enter Text to Convert Capitalize Case", { position: "top-center", autoClose: 1500 });
+    }
+  }
   const HandleOnChange = (event) => {
     setText(event.target.value);
   };
@@ -86,8 +111,10 @@ const TextUtils = (props) => {
             style={{ backgroundColor: '#302f30', color: 'white' }}
           ></textarea>
         </div>
-        <button onClick={handleUpClick}>Uppercase</button>{" "}
-        <button onClick={handleloClick}>Lowercase</button>{" "}
+        <button onClick={handleUpClick}>UPPER CASE</button>{" "}
+         <button onClick={handleSnackCase}>Snack_Case</button>
+       <button onClick={  handleCapitalizeCase}>Capitalize Case</button>
+        <button onClick={handleloClick}>lowercase</button>{" "}
         <button onClick={handleClrClick}>Clear</button>{" "}
         <button onClick={copyToClipboard}>Copy</button>{" "}
         <button onClick={downloadTxtFile}>Download</button>{" "}
