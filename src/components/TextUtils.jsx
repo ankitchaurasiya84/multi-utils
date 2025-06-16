@@ -57,6 +57,15 @@ const TextUtils = (props) => {
     }
   };
 
+  const handleSlugConverter=()=>{
+    if(text!==""){
+     setText(text.toLowerCase().replaceAll(" ","-"))
+    }else {
+      toast("Enter Text to Convert slug", { position: "top-center", autoClose: 1500 });
+    }
+
+  }
+
   const handleSnackCase=()=>{
     if(text!==""){
       let newText=text.replaceAll(" ","_")
@@ -119,6 +128,7 @@ const TextUtils = (props) => {
         <button onClick={copyToClipboard}>Copy</button>{" "}
         <button onClick={downloadTxtFile}>Download</button>{" "}
         <button onClick={handleExtraSpace}>Remove Extra Spaces</button>
+         <button onClick={handleSlugConverter}>slug_converter</button>
       </div>
 
       <div className="container" style={{ color: 'black' }}>
